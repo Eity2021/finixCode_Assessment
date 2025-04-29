@@ -1,28 +1,34 @@
 import React from "react";
-import { ChevronDown, Heart, MoreVertical, Search, Share2, Trophy, User } from "lucide-react";
-import FootballImageSilder from "../assets/image/mainContent/Football_Image_silder";
+import { Heart, MoreVertical, Share2 } from "lucide-react";
+import FootballImageSlider from "../assets/image/mainContent/Football_Image_slider.png";
+import BackgroundPart1 from "../assets/image/mainContent/BackgroundPart1.png";
+import BackgroundPart2 from "../assets/image/mainContent/BackgroundPart2.png";
 
- export default function MainContent() {
+export default function MainContent() {
   return (
     <div>
- <main className="container mx-auto p-4">
+      <main className="container ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           {/* Left Column - Main Image and Event Details */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="relative rounded-xl overflow-hidden aspect-[16/9]">
+          <div className="lg:col-span-2 space-y-3">
+            <div className="relative rounded-xl overflow-hidden w-full">
               <img
-                src={FootballImageSilder}
+                src={FootballImageSlider}
                 alt="Football field at night"
                 fill
-                className="object-cover"
+                className=" rounded-[25px]"
               />
             </div>
 
             <div className="flex justify-between items-start">
               <div>
-                <h1 className="text-2xl md:text-3xl font-bold">Road to the Football Finals</h1>
+                <h1 className="text-2xl md:text-3xl font-bold">
+                  Road to the Football Finals
+                </h1>
                 <p className="text-gray-600">Bashundhara Sports Complex</p>
-                <p className="text-gray-600 text-sm mt-1">Mar 14 from 7:30 PM - 9:30 PM</p>
+                <p className="text-gray-600 text-sm mt-1">
+                  Mar 14 from 7:30 PM - 9:30 PM
+                </p>
               </div>
 
               <div className="flex gap-2">
@@ -40,20 +46,21 @@ import FootballImageSilder from "../assets/image/mainContent/Football_Image_sild
           </div>
 
           {/* Right Column - Thumbnails and Event Info */}
-          <div className="space-y-4">
-            <div className="grid grid-cols-1 gap-4">
-              <div className="relative rounded-xl overflow-hidden aspect-[16/9]">
+          <div className="">
+            <div className="grid grid-cols-1 gap-2">
+              <div className="relative rounded-xl overflow-hidden ">
                 <img
-                  src="/placeholder.svg?height=300&width=500"
+                  src={BackgroundPart1}
                   alt="Football field thumbnail"
                   fill
-                  className="object-cover"
+                  className="object-cover w-full "
                 />
               </div>
 
-              <div className="relative rounded-xl overflow-hidden aspect-[16/9] bg-gray-800 flex items-center justify-center">
-                <div className="text-white text-xl font-semibold">+2 photos</div>
-              </div>
+              <div
+                className="relative rounded-xl overflow-hidden w-full h-[190px] bg-cover  flex items-center justify-center no-repeat"
+                style={{ backgroundImage: `url(${BackgroundPart2})` }}
+              ></div>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm">
@@ -67,12 +74,13 @@ import FootballImageSilder from "../assets/image/mainContent/Football_Image_sild
                   <span className="text-xs text-gray-400 ml-1">(price)</span>
                 </div>
               </div>
-              <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white">Join event</button>
+              <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white">
+                Join event
+              </button>
             </div>
           </div>
         </div>
       </main>
     </div>
   );
-};
-
+}
