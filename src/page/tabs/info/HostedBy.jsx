@@ -3,8 +3,8 @@ export default function HostedBy() {
     return (
         <section>
         <h2 className="text-[24px] font-[700] text-[#171717] mb-4">Hosted by</h2>
-        <div className="bg-[#4E566B] text-white rounded-lg py-[27px] px-[24px] shadow-sm md:w-[720px] w-full">
-          <div className="flex  items-center gap-4">
+        <div className="bg-[#4E566B] text-white rounded-lg py-[27px] px-[24px] shadow-sm   md:w-[720px] w-full">
+          <div className="sm:flex  items-center gap-4">
             {/* Avatar */}
             <div className="flex-shrink-0">
               <div className="w-20 h-20 rounded-full overflow-hidden ">
