@@ -7,8 +7,9 @@ export default function GoodToKnow() {
       {/* Good to Know Section */}
       <section className="mb-10">
         <h2 className="text-[32px] font-[700] text-[#171717] leading-[28px] mb-[22px]">Good to know</h2>
-        <div className="grid  md:grid-cols-3 grid-cols-3 gap-4">
-          {/* Highlights */}
+        <div className="grid  xl:grid-cols-3 lg:grid-cols-3  grid-cols-1 gap-4">
+
+
           <div className="bg-[#DA6049] text-white rounded-lg p-5 shadow-sm ">
             <h3 className="text-[24px] font-[700] text-[#fff] mb-3">Highlights</h3>
             <ul className="space-y-3">
@@ -33,7 +34,7 @@ export default function GoodToKnow() {
 
 
           {/* Refund Policy */}
-          <div className="bg-[#34735F]  rounded-lg p-5 shadow-sm col-span-2">
+          <div className="bg-[#34735F]  rounded-lg p-5 shadow-sm lg:col-span-2 ">
             <h3 className="text-[24px] font-[700] text-[#fff] mb-3">Refund & cancellation policy</h3>
             <ul className="space-y-2 text-[18px] font-[500] text-[#fff] mb-3">
               {[

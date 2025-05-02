@@ -1,16 +1,18 @@
 import React from "react";
 import MainContent from "./MainContent";
 import Events from "./events/Events";
-import PaymentModal from "../page/events//PaymentModal";
 export default function Home() {
   return (
     <div>
-      <div>
-        <div className="bg-[#F4F5EF] w-full">
-          <MainContent ></MainContent>
+      <div >
+        <div className=" ">
+      <MainContent></MainContent> 
         </div>
-        <Events></Events>
+          {/* <Events></Events> */}
       </div>
     </div>
   );
 }
+
+// F4F5EF
+//FF0000

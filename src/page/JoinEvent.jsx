@@ -6,9 +6,9 @@ export default function JoinEvent() {
   
   return (
     <div>
-      <div className="flex justify-end mt-[24px]">
+      <div className="flex  justify-end mt-[40px]">
         <div className="bg-white rounded-[16px] p-[24px]  shadow-sm w-[400px]">
-          <div className="flex justify-between items-center mb-4 border border-[#E5E5E5] py-[18px] px-[16px] rounded-[16px]">
+          <div className="lg:flex block justify-between items-center mb-4 border border-[#E5E5E5] py-[18px] px-[16px] rounded-[16px]">
             <div className="text-[#DA6049] font-[500]  text-[16px]">
               <span className="">6</span> spots left
             </div>

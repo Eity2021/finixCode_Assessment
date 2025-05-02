@@ -16,8 +16,8 @@ export default function Tabs() {
           onClick={() => setActiveTab(tab)}
           className={` w-1/3 text-center border-b-2 transition-colors   ${
             activeTab === tab
-              ? "border-[#DA6049] text-[#DA6049] py-[32px] text-[24px] font-[500]"
-              : "border-transparent text-[##171717] hover:text-[#171717] text-[24px] font-[500]"
+              ? "border-[#DA6049] text-[#DA6049] py-[32px] md:text-[24px] text-[18px] font-[500]"
+              : "border-transparent text-[##171717] hover:text-[#171717] tmd:text-[24px] text-[18px] font-[500]"
           }`}
         >
           {tab.charAt(0).toUpperCase() + tab.slice(1)}

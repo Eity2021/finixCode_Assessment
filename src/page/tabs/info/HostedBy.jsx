@@ -3,8 +3,8 @@ export default function HostedBy() {
     return (
         <section>
         <h2 className="text-[24px] font-[700] text-[#171717] mb-4">Hosted by</h2>
-        <div className="bg-[#4E566B] text-white rounded-lg py-[27px] px-[24px] shadow-sm w-[720px]">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="bg-[#4E566B] text-white rounded-lg py-[27px] px-[24px] shadow-sm md:w-[720px] w-full">
+          <div className="flex  items-center gap-4">
             {/* Avatar */}
             <div className="flex-shrink-0">
               <div className="w-20 h-20 rounded-full overflow-hidden ">
@@ -34,10 +34,10 @@ export default function HostedBy() {
 
             {/* Actions */}
             <div className="flex gap-2 mt-3 sm:mt-0">
-              <button className="bg-[#FDE8CD] text-[16px] font-[500] text-[#171717] rounded-full px-[27px] py-[10px] h-auto text-sm font-medium">
+              <button className="bg-[#FDE8CD] text-[16px] font-[500] text-[#171717] rounded-full px-[27px] py-[10px] h-auto text-sm ">
                 Message
               </button>
-              <button className="border border-[#FDE8CD] text-[16px] font-[500] text-[#FDE8CD] rounded-full px-[16px] py-[10px] h-auto text-sm font-medium">
+              <button className="border border-[#FDE8CD] text-[16px] font-[500] text-[#FDE8CD] rounded-full px-[16px] py-[10px] h-auto text-sm">
                 View profile
               </button>
             </div>

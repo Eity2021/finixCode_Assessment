@@ -10,9 +10,10 @@ export default function Location() {
         Jean Baptiste Point du Sable Lake Shore Drive, Chicago, Illinois
       </p>
     </div>
+
+
       <button className="mt-3 inline-flex items-center px-[15px] py-[16px] text-sm border border-[#4E566B] rounded ">
         <p className="text-[18px] font-[500] text-[#4E566B] leading-[8px]">  Open maps</p>
-       
       </button>
     </div>
   </section>

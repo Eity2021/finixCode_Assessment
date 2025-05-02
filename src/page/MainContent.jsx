@@ -10,32 +10,33 @@ import Tabs from "./tabs/Tabs";
 
 export default function MainContent() {
   return (
-    <main className="container mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div className="bg-[#F4F5EF]">
+<main className="md:container  mx-auto py-10 xl:px-0 px-[10px] bg-[#F4F5EF]">
+      <div className="grid grid-cols-1  md:grid-cols-3 md:gap-6 gap-0">
         {/* Left Column */}
-        <div className="lg:col-span-2 space-y-6">
-          <div className="relative rounded-xl overflow-hidden w-full">
+        <div className="col-span-2 ">
+          <div className="w-full">
             <img
               src={FootballImageSlider}
               alt="Football field at night"
-              className="rounded-[25px] w-full h-auto object-cover"
+              className="rounded-[25px] w-full "
             />
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center  pt-[30px]">
             <div>
-              <h1 className="font-extrabold text-3xl md:text-4xl lg:text-[48px] text-[#171717] leading-tight">
+              <h1 className="font-[900] text-[30px] md:text-[26px] lg:text-[40px] xl-[48px] text-[#171717] leading-tight ">
                 Road to the Football Finals
               </h1>
-              <p className="text-[#4A4A4A] text-lg md:text-xl font-normal mt-2">
+              <p className="text-[#4A4A4A] text-lg lg:text-[24px] font-normal mt-2">
                 Bashundhara Sports Complex
               </p>
-              <p className="text-[#4A4A4A] text-lg md:text-xl font-normal mt-1">
+              <p className="text-[#4A4A4A] text-lg lg:text-[24px] font-normal mt-1">
                 Mar 14 from 7:30 PM - 9:30 PM
               </p>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 md:mt-[0px] mt-[20px]">
               <button className="rounded-full p-2 border border-[#E5E5E5] bg-[#F6F6F6]">
                 <img src={downloadIcon} alt="downloadIcon" className="w-5 h-5" />
               </button>
@@ -50,24 +51,24 @@ export default function MainContent() {
 
           <div className="mt-10">
             <Tabs />
-          </div>
+          </div> 
         </div>
 
         {/* Right Column */}
-        <div className="space-y-4">
+        <div >
           <div className="space-y-4">
-            <div className="rounded-xl overflow-hidden w-full">
+            <div className="">
               <img
                 src={BackgroundPart1}
                 alt="Football field thumbnail"
-                className="object-cover w-full h-auto"
+                className="w-full"
               />
             </div>
-            <div className="rounded-xl overflow-hidden w-full">
+            <div className="">
               <img
                 src={BackgroundPart2}
                 alt="Football field thumbnail"
-                className="object-cover w-full h-auto"
+                className="w-full"
               />
             </div>
           </div>
@@ -75,5 +76,6 @@ export default function MainContent() {
         </div>
       </div>
     </main>
+</div>
   );
 }
