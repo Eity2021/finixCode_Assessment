@@ -5,10 +5,12 @@ export default function Home() {
   return (
     <div>
       <div >
-        <div className=" ">
+        <div className="w-[100%]">
       <MainContent></MainContent> 
         </div>
-          {/* <Events></Events> */}
+  <div className="">
+  <Events></Events> 
+  </div>
       </div>
     </div>
   );

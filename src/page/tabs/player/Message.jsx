@@ -25,7 +25,7 @@ export default function Message() {
       }
     
   return (
-    <div className="mx-auto p-4  ">
+    <div className="mx-auto lg:p-4 p-0 ">
     <div className="flex justify-between items-center mb-4">
       <h2 className="text-[32px] font-[700] text-[#171717]">Players</h2>
    <div className="flex gap-2">
@@ -44,16 +44,16 @@ export default function Message() {
             <div className="h-8 w-8 rounded-full bg-[#FDE8CD] text-[#34735F] flex items-center justify-center text-[16px] font-bold">
               {getInitials(player.name)}
             </div>
-            <div className="text-[#FDE8CD] font-medium text-[24px]">
+            <div className="text-[#FDE8CD] font-medium md:text-[24px]  text-[20px]  ">
               {player.name}
               {player.isHost && (
-                <span className="text-[16px] opacity-75 font-normal">(Host)</span>
+                <span className="lg:text-[16px]  text-[14px] opacity-75 font-normal">(Host)</span>
               )}
             </div>
           </div>
           <button
             onClick={() => handleMessage(player.id)}
-            className="bg-white  text-[#171717] text-[#171717] px-[12px] py-[16px] rounded-md font-[500]"
+            className="bg-white  text-[#171717] text-[16px] md:px-[12px] md:py-[16px]     px-[8px] py-[10px]        rounded-md font-[500]"
           >
             Message
           </button>

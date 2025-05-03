@@ -75,37 +75,49 @@ const events = [
 ];
 
 export default function Events() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const maxIndex = Math.max(0, events.length - 3);
   const containerRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(3);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (containerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        const newCardWidth = (containerWidth - 32) / 3;
-        setCardWidth(newCardWidth);
-      }
-    };
+ useEffect(() => {
+  const updateCardLayout = () => {
+    const screenWidth = window.innerWidth;
+    let cards = 3;
 
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-    return () => window.removeEventListener("resize", updateCardWidth);
-  }, []);
+    if (screenWidth < 640) {
+      cards = 1;
+    } else if (screenWidth >= 640 && screenWidth < 1024) {
+      cards = 2;
+    } else {
+      cards = 3;
+    }
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 1));
+    setCardsToShow(cards);
+
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const newCardWidth = (containerWidth - (cards - 1) * 16) / cards;
+      setCardWidth(newCardWidth);
+    }
   };
 
-  const handleNext = () => {
+  updateCardLayout();
+  window.addEventListener("resize", updateCardLayout);
+  return () => window.removeEventListener("resize", updateCardLayout);
+}, []);
+
+  const maxIndex = Math.max(0, events.length - cardsToShow);
+
+  const handlePrev = () => setCurrentIndex((prev) => Math.max(0, prev - 1));
+  const handleNext = () =>
     setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
-  };
-
   return (
-    <div className="container mx-auto px-4">
+    <div className="px-4 md:container mx-auto">
     <div className="p-6 bg-white">
-      <div className="flex items-center justify-between mb-4">
+
+
+       <div className="flex items-center justify-between mb-4 ">
         <h2 className="text-xl md:text-2xl font-bold text-[#261B36] py-5">
           Other events you may like
         </h2>
@@ -127,9 +139,11 @@ export default function Events() {
             <span className="sr-only">Next</span>
           </button>
         </div>
-      </div>
+      </div> 
 
-      <div className="relative overflow-hidden" ref={containerRef}>
+
+
+       <div className="relative overflow-hidden" ref={containerRef}>
         <div
           className="flex gap-4 transition-transform duration-300 ease-in-out"
           style={{
@@ -140,13 +154,13 @@ export default function Events() {
           {events.map((event) => (
             <div
               key={event.id}
-              className="rounded-[30px] overflow-hidden border border-gray-200 flex-shrink-0 bg-white"
+              className="rounded-[30px] overflow-hidden border border-gray-200 flex-shrink-0 bg-white pb-[10px]"
               style={{ width: `${cardWidth}px` }}
             >
               <img
                 src={event.image}
                 alt={event.title}
-                className="w-full h-48 object-cover"
+                className="w-full lg:48 h-40"
               />
               <div className="pt-4 px-4 bg-white">
                 <div className="flex gap-2 mb-2">
@@ -167,7 +181,7 @@ export default function Events() {
                   </span>
                 </div>
 
-                <h3 className="text-[20px] font-medium text-[#34735F] mb-1">
+                <h3 className="lg:text-[20px] text-[15px] font-medium text-[#34735F] mb-1">
                   {event.title}
                 </h3>
                 <div className="text-[14px] text-[#171717] mb-1">
@@ -192,7 +206,7 @@ export default function Events() {
             </div>
           ))}
         </div>
-      </div>
+      </div> 
     </div>
   </div>
   );

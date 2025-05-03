@@ -96,14 +96,14 @@ export default function Comments() {
                         {message.avatar}
                       </div>
                       <span
-                        className={`font-medium text-[24px] flex items-center   ${message.heading}`}
+                        className={`font-medium md:text-[24px] text-[20px] flex items-center   ${message.heading}`}
                       >
                         {message.user}
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <span
-                        className={`text-[18px] font-[400]  opacity-80 ${message.heading}`}
+                        className={`md:text-[18px] text-[14px] font-[400]  opacity-80 ${message.heading}`}
                       >
                         {message.time}
                       </span>
@@ -120,7 +120,7 @@ export default function Comments() {
                       </button>
                     </div>
                   </div>
-                  <p className={`text-[20px] font-[400] ${message.textColor}`}>
+                  <p className={`md:text-[20px] text-[16px] font-[400] ${message.textColor}`}>
                     {message.content}
                   </p>
                 </div>
