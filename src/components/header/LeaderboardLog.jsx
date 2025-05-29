@@ -11,7 +11,7 @@ export default function LeaderboardLog() {
         >
           <img src={JithboIcon} className="h-4 w-4" />
           <span className="text-[#34735F] size16 space-y-4">
-            Leaderboard
+            {/* Leaderboard */}
           </span>
         </a>
 
